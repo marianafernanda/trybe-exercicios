@@ -23,3 +23,15 @@ nav {
     top: 150px;
     width: 1200px;
 }
+#fatos {
+    position: absolute;
+    top: 250px;
+    font-size: 30px;
+    color: darkgreen;
+}
+#info-gerais {
+    position: absolute;
+    top: 310px;
+    font-size: 18px;
+    color: darkblue;
+}
