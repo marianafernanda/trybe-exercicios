@@ -44,6 +44,7 @@ function acessaElemento() {
       let pai = document.querySelector('#pai');
       let irmaoOndeVoceEsta = document.createElement('section');
       irmaoOndeVoceEsta.innerText = conteudo;
+      irmaoOndeVoceEsta.id = 'irmao';
       pai.appendChild(irmaoOndeVoceEsta);
   };
   irmaoOndeVoceEsta();
@@ -53,6 +54,7 @@ function acessaElemento() {
       let pai1 = document.querySelector('#elementoOndeVoceEsta');
       let terceiroFilhoDoFilho = document.createElement('section');
       terceiroFilhoDoFilho.innerText = conteudo1;
+      terceiroFilhoDoFilho.id = 'terceiroFilhoDoFilho';
       pai1.appendChild(terceiroFilhoDoFilho);
   }
   terceiroFilhoDoFilho();
@@ -71,3 +73,35 @@ function acessaElemento() {
       console.log(document.querySelector('#primeiroNeto').parentElement.parentElement.nextElementSibling);
   }
   acessaTerceiroFilho2();
+
+  function removeFilhos() {
+      let paiPai = document.getElementById('pai');
+
+      for (let index = 0; index < paiPai.children.length; index += 1) {
+          let element = paiPai.children[index];
+          console.log(element);
+
+          if (element.id !== 'elementoOndeVoceEsta') {
+              paiPai.removeChild(element);
+          }
+      }
+
+      let onde = document.getElementById('elementoOndeVoceEsta');
+
+      for (let index = 0; index < onde.children.length; index += 1) {
+          let element = onde.children[index];
+          console.log(element);
+
+          if (element.id !== 'primeiroFilhoDoFilho') {
+              onde.removeChild(element);
+          }
+      }
+
+      let primeiroNeto1 = document.getElementById('primeiroNeto');
+      primeiroNeto1.remove();
+
+      let atencao = document.querySelector('#elementoOndeVoceEsta').nextSibling;
+      atencao.remove();
+  }
+  removeFilhos();
+  removeFilhos();
