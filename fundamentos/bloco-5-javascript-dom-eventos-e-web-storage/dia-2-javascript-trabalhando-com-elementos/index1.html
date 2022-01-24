@@ -70,15 +70,49 @@
       tag3.className = "center-content";
       tag2.appendChild(tag3);
 
-      let texto2 = 'Algum texto';
-      let tag4 = document.createElement('p');
+      let texto2 = "Algum texto";
+      let tag4 = document.createElement("p");
       tag4.innerText = texto2;
       tag3.appendChild(tag4);
 
-      let tag5 = document.createElement('section');
-      tag5.className = 'left-content';
+      let tag5 = document.createElement("section");
+      tag5.className = "left-content";
       tag2.appendChild(tag5);
-      
+
+      let tag6 = document.createElement("section");
+      tag6.className = "right-content";
+      tag2.appendChild(tag6);
+
+      let tag7 = document.createElement("img");
+      tag7.className = "small-image";
+      tag7.src = "https://picsum.photos/200";
+      tag5.appendChild(tag7);
+
+      let tag8 = document.createElement("ul");
+      tag6.appendChild(tag8);
+      let arrayDeNumeros = [
+        "um",
+        "dois",
+        "três",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+      for (let i in arrayDeNumeros) {
+        let tag81 = document.createElement("li");
+        tag81.innerHTML = arrayDeNumeros[i];
+        tag8.appendChild(tag81);
+      }
+
+      for (let index = 1; index <= 3; index += 1) {
+        let tag9 = document.createElement('h3');
+        tag9.innerHTML = index;
+        tag2.appendChild(tag9);
+      }
     </script>
   </body>
 </html>
