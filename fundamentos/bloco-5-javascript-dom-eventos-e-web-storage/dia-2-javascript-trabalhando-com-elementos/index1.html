@@ -56,6 +56,25 @@
     </style>
   </head>
   <body>
-    <script src="script1.js"></script>
+    <script>
+      function requisito1() {
+        let texto1 = "Exercício 5.2 - JavaScript DOM";
+        let tag1 = document.createElement("h1");
+        tag1.innerText = texto1;
+        document.body.appendChild(tag1);
+      }
+      requisito1();
+
+      function requisito2() {
+        let tag2 = document.createElement("main");
+        tag2.className = "main-content";
+        document.body.appendChild(tag2);
+
+        let tag3 = document.createElement("section");
+        tag3.className = "center-content";
+        tag2.appendChild(tag3);
+      }
+      requisito2();
+    </script>
   </body>
 </html>
