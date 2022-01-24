@@ -43,3 +43,14 @@ function createDaysOfTheWeek() {
     }
   }
   requisito1();
+
+  function requisito2(nomeDoBotao) {
+      let percorreBotao = document.querySelector('.buttons-container');
+      let botaoNovo = document.createElement('button');
+
+      botaoNovo.innerHTML = nomeDoBotao;
+      botaoNovo.id = 'btn-holiday';
+
+      percorreBotao.appendChild(botaoNovo);
+  }
+  requisito2('Feriados');
