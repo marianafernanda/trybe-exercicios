@@ -113,6 +113,22 @@
         tag9.innerHTML = index;
         tag2.appendChild(tag9);
       }
+
+      tag1.className = 'title';
+
+      let elementsH3 = document.getElementsByTagName('h3');
+      for (let indx = 0; indx < 3; indx += 1) {
+        elementsH3[indx].className = 'description'
+      }
+
+      tag2.removeChild(tag5);
+
+      tag6.style.marginRight = 'auto';
+
+      tag3.parentElement.style.backgroundColor = 'green';
+
+      tag8.lastChild.remove();
+      tag8.lastChild.remove();
     </script>
   </body>
 </html>
