@@ -69,3 +69,16 @@ function createDaysOfTheWeek() {
       percorreBotaoNovo.addEventListener('click', requisito3)
   }
   requisito3();
+
+  function requisito4(nomeDoBotao) {
+    let percorreBotao = document.querySelector('.buttons-container');
+    let botaoNovo = document.createElement('button');
+
+    botaoNovo.innerHTML = nomeDoBotao;
+    botaoNovo.id = 'btn-friday';
+
+    percorreBotao.appendChild(botaoNovo);
+  }
+  requisito4('Sexta-feira');
+
+  
