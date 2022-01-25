@@ -54,3 +54,18 @@ function createDaysOfTheWeek() {
       percorreBotao.appendChild(botaoNovo);
   }
   requisito2('Feriados');
+
+  function requisito3() {
+      let percorreBotaoNovo = document.querySelector('#btn-holiday');
+      let percorreHolidays = document.querySelectorAll('.holiday');
+
+      for (index = 0; index < percorreHolidays.length; index += 1) {
+          if (percorreHolidays[index].style.backgroundColor === 'lightgreen') {
+              percorreHolidays[index].style.backgroundColor = 'rgb(238,238,238)';
+          } else {
+              percorreHolidays[index].style.backgroundColor = 'lightgreen'
+          }
+      }
+      percorreBotaoNovo.addEventListener('click', requisito3)
+  }
+  requisito3();
