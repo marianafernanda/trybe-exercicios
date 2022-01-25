@@ -96,3 +96,21 @@ function createDaysOfTheWeek() {
   }
   let fridays = [4, 11, 18, 25];
   requisito5(fridays);
+
+  function requisito61(event) {
+    let days = document.querySelector('#days');
+
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  }
+  days.addEventListener('mouseover', requisito61);
+
+  function requisito62(event) {
+      let days = document.querySelector('#days');
+
+      event.target.style.fontSize = '20px';
+      event.target.style.fontWeight = '200';
+  }
+  days.addEventListener('mouseout', requisito62);
+
+  
