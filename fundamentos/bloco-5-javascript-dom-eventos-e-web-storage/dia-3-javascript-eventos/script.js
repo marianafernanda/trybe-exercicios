@@ -113,4 +113,13 @@ function createDaysOfTheWeek() {
   }
   days.addEventListener('mouseout', requisito62);
 
+  function requisito7(string) {
+      let tasks = document.querySelector('.my-tasks');
+      let span = document.createElement('span');
+
+      span.innerHTML = string;
+      tasks.appendChild(span);
+  }
+  requisito7('Estudar');
+
   
