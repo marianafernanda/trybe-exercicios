@@ -131,4 +131,15 @@ function createDaysOfTheWeek() {
       tasks.appendChild(div);
   }
   requisito8('lightgreen');
-  
+
+  function requisito9(event) {
+        let selectedTask = document.getElementsByClassName('task selected');
+      
+          if (selectedTask.length === 0) {
+            event.target.className = 'task selected';
+          } else {
+            event.target.className = 'task';
+          }
+  }
+  let myTasks = document.querySelector('.task');
+  myTasks.addEventListener('click', requisito9);
