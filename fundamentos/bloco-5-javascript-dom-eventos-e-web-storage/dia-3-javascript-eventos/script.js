@@ -122,4 +122,13 @@ function createDaysOfTheWeek() {
   }
   requisito7('Estudar');
 
+  function requisito8(color) {
+      let tasks = document.querySelector('.my-tasks');
+      let div = document.createElement('div');
+
+      div.className = 'task';
+      div.style.backgroundColor = color;
+      tasks.appendChild(div);
+  }
+  requisito8('lightgreen');
   
