@@ -103,6 +103,7 @@ function createDaysOfTheWeek() {
     event.target.style.fontSize = '30px';
     event.target.style.fontWeight = '600';
   }
+  let days = document.querySelector('#days');
   days.addEventListener('mouseover', requisito61);
 
   function requisito62(event) {
@@ -143,3 +144,18 @@ function createDaysOfTheWeek() {
   }
   let myTasks = document.querySelector('.task');
   myTasks.addEventListener('click', requisito9);
+
+  function requisito10(event) {
+        let selectedTask = document.getElementsByClassName('task selected');
+        let taskDiv = document.querySelector('.task');
+        let taskColor = taskDiv.style.backgroundColor;
+        
+          let eventTargetColor = event.target.style.color;
+          if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+            let color = selectedTask[0].style.backgroundColor;
+            event.target.style.color = color;
+          } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+            event.target.style.color = 'rgb(119,119,119)';
+          }
+  }
+  days.addEventListener('click',requisito10);
