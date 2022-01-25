@@ -81,4 +81,18 @@ function createDaysOfTheWeek() {
   }
   requisito4('Sexta-feira');
 
-  
+  function requisito5() {
+    let percorreBotaoNovo1 = document.querySelector('#btn-friday');
+    let percorreFridays = document.getElementsByClassName('friday');
+
+    for (index = 0; index < percorreFridays.length; index += 1) {
+        if (percorreFridays[index].innerText !== 'TGIF') {
+            percorreFridays[index].innerText = 'TGIF';
+        } else {
+            percorreFridays[index].innerText = fridays[index];
+        }
+    }
+    percorreBotaoNovo1.addEventListener('click', requisito5)
+  }
+  let fridays = [4, 11, 18, 25];
+  requisito5(fridays);
