@@ -7,7 +7,7 @@ const people = [
 ];
 
 const verifyAges = (arr, minimumAge) => {
-  return Object.values(arr).every((idade) => idade >= minimumAge);
+  return arr.every((pessoa) => pessoa.age >= minimumAge);
 };
 
 console.log(verifyAges(people, 18));
